@@ -12,6 +12,8 @@ import Header from './components/header/Header'
 import './App.css'
 import ScrollToTop from './components/ScrollToTop';
 
+import SignInSignOutPage from './pages/sign-in-sign-out/SignInSignOutPage'
+
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
 
     <Route exact path='/' component={Homepage} />
     <Route path='/shop' component={ShopPage} />
+    <Route path='/signin' component={SignInSignOutPage} />
     </Switch>
     </>
   );
