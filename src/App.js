@@ -14,13 +14,40 @@ import ScrollToTop from './components/ScrollToTop';
 
 import SignInSignOutPage from './pages/sign-in-sign-out/SignInSignOutPage'
 
+import { auth } from './firebase/firebase.utils' 
 
 
-function App() {
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       currentUser: null
+    }
+  }
+
+  unsubscribeFromAuth = null
+  
+componentDidMount() {
+  this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+
+    this.setState({currentUser: user});
+
+    console.log(user)
+  })
+}
+
+componentWillUnmount() {
+  this.unsubscribeFromAuth()
+}
+
+  render () {
   return (
     <>
 
-    <Header/>
+    <Header currentUser={this.state.currentUser}/>
     <ScrollToTop/>
     <Switch>
 
@@ -30,6 +57,7 @@ function App() {
     </Switch>
     </>
   );
+  }
 }
 
 export default App;
