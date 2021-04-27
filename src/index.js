@@ -5,8 +5,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import { PersistGate } from 'redux-persist/es/integration/react'
 
-import store from './redux/store'
+import { persistor, store } from './redux/store'
 
 
 import { Provider } from 'react-redux';
@@ -17,7 +18,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
     <BrowserRouter>
+    <PersistGate persistor={persistor}>
     <App />
+    </PersistGate>
 
     </BrowserRouter>
     </Provider>
