@@ -12,7 +12,7 @@ import "./header.styles.scss";
 import { auth } from "../../firebase/firebase.utils";
 
 import CartDropdown from "../../components/cart-dropdown/CartDropdown";
-import {selectCurrentUser} from '../../redux/user/user.slectors'
+import {selectCurrentUser} from '../../redux/user/user.selectors'
 import {selectCartHidden} from  '../../redux/cart/cart.selectors'
 
 function Header({ currentUser, hidden }) {
@@ -26,7 +26,7 @@ function Header({ currentUser, hidden }) {
         <Link className="option" to="/shop">
           SHOP
         </Link>
-        <Link className="option" to="/shop">
+        <Link className="option" to="/">
           CONTACT
         </Link>
 
