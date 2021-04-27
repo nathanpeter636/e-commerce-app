@@ -1,28 +1,28 @@
-import React from "react";
+import React from 'react';
 
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { createStructuredSelector } from "reselect";
+import { createStructuredSelector } from 'reselect';
 
-import Homepage from "./pages/Homepage";
+import Homepage from './pages/Homepage';
 
-import ShopPage from "./pages/shop/ShopPage";
+import ShopPage from './pages/shop/ShopPage';
 
-import Header from "./components/header/Header";
+import Header from './components/header/Header';
 
-import "./App.css";
-import ScrollToTop from "./components/ScrollToTop";
+import './App.css';
+import ScrollToTop from './components/ScrollToTop';
 
-import SignInSignOutPage from "./pages/sign-in-sign-out/SignInSignOutPage";
+import SignInSignOutPage from './pages/sign-in-sign-out/SignInSignOutPage';
 
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
-import { setCurrentUser } from "./redux/user/user.actions";
+import { setCurrentUser } from './redux/user/user.actions';
 
-import { selectCurrentUser } from "./redux/user/user.selectors";
-import Checkout from "./pages/checkout/checkout";
+import { selectCurrentUser } from './redux/user/user.selectors';
+import Checkout from './pages/checkout/checkout';
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -56,15 +56,15 @@ class App extends React.Component {
         <Header />
         <ScrollToTop />
         <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route path="/shop" component={ShopPage} />
-          <Route exact path="/checkout" component={Checkout} />
+          <Route exact path='/' component={Homepage} />
+          <Route path='/shop' component={ShopPage} />
+          <Route exact path='/checkout' component={Checkout} />
           <Route
             exact
-            path="/signin"
+            path='/signin'
             render={() =>
               this.props.currentUser ? (
-                <Redirect to="/" />
+                <Redirect to='/' />
               ) : (
                 <SignInSignOutPage />
               )
