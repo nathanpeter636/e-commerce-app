@@ -23,9 +23,30 @@
     }
   }
 
+  .StripeCheckout {
+    margin-left: auto;
+    background: gray!important;
+    margin-top: 50px;
+
+    span {
+      background-image: linear-gradient(#a0a8ad, #080808 85%, #000000) !important;
+      
+    }
+  }
+  
+
   .total {
     margin-top: 30px;
     margin-left: auto;
     font-size: 36px;
   }
+
+  .test-warning {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+  }
+
+
+  
 }
