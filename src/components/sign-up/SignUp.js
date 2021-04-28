@@ -63,7 +63,7 @@ class SignUp extends React.Component {
 
     return (
       <div className="sign-up">
-        <h2 className="Title">I already have an account</h2>
+        <h2 className="Title">I dont have an account</h2>
 
         <span>Sign up with your email and password</span>
 

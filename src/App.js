@@ -4,7 +4,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import { createStructuredSelector } from 'reselect';
 
-import Homepage from './pages/Homepage';
+import Homepage from './pages/homepage/Homepage';
 
 import ShopPage from './pages/shop/ShopPage';
 
