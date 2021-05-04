@@ -31,7 +31,7 @@ function checkout({ cartItems, total }) {
         <span>Product</span>
       </HeaderBlockContainer>
       <HeaderBlockContainer>
-        <span>Description</span>
+        <span>Description</span>gi
       </HeaderBlockContainer>
       <HeaderBlockContainer>
         <span>Quantity</span>

@@ -31,5 +31,25 @@ export const OptionLink = styled(Link)`
 
 padding: 10px 15px;
   cursor: pointer;
+  position: relative;
+  
+
+  ::before {
+    position: absolute;
+    content: "";
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #d90013;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all .3s ease-in-out 0s;
+  }
+
+  :hover:before {
+    visibility: visible;
+  transform: scaleX(1);
+  }
 `
 
