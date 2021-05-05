@@ -21,7 +21,7 @@ function Header({ currentUser, hidden }) {
   return (
     <HeaderContainer>
       <LogoContainer to="/">
-        Logo
+      xyz clothing
       </LogoContainer>
 
       <OptionsContainer>

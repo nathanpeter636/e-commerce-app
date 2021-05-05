@@ -12,9 +12,24 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
-  height: 100%;
-  width: 70px;
-  padding: 25px;
+     font-size: 20px;
+    height: 100%;
+    width: 70px;
+    padding: 40px 15px;
+    text-transform: uppercase;
+    font-style: italic;
+    border-bottom: solid 4px #d90013;
+    border-radius: 65px 15px;
+    font-weight: 600;
+    width: 150px;
+
+    &:hover {
+
+      color: #d90013;
+      border-bottom: solid 4px #000000;
+
+    }
+
 `;
 
 export const OptionsContainer = styled.div`
