@@ -31,12 +31,6 @@ export const LogoContainer = styled(Link)`
     font-weight: 600;
     width: 150px;
 
-    &:hover {
-
-      color: #d90013;
-      border-bottom: solid 4px #000000;
-
-    }
 
     @media screen and (max-width: 800px) {
 
@@ -44,11 +38,11 @@ export const LogoContainer = styled(Link)`
     padding: 10px 0px 0px;
     font-size: 18px;
 
-    &:hover {
+    span {
+      display: none;
+    }
 
-    pointer-events: none;
-
-}
+ 
 
 }
 
@@ -65,7 +59,8 @@ export const OptionsContainer = styled.div`
   @media screen and (max-width: 800px) {
 
     
-    width: 90%;
+    width: 130%;
+   
 
 }
 `;
@@ -73,7 +68,7 @@ export const OptionsContainer = styled.div`
 
 export const OptionLink = styled(Link)`
 
-padding: 10px 15px;
+padding: 10px 12px;
   cursor: pointer;
   position: relative;
   

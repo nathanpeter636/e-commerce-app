@@ -21,7 +21,7 @@ function Header({ currentUser, hidden }) {
   return (
     <HeaderContainer>
       <LogoContainer to="/">
-      side shop co.
+      side shop <span>co.</span> 
       </LogoContainer>
 
       <OptionsContainer>
