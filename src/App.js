@@ -10,7 +10,8 @@ import ShopPage from './pages/shop/ShopPage';
 
 import Header from './components/header/Header';
 
-import './App.css';
+import {GlobalStyle} from './global.styles'
+
 import ScrollToTop from './components/ScrollToTop';
 
 import SignInSignOutPage from './pages/sign-in-sign-out/SignInSignOutPage';
@@ -56,6 +57,7 @@ class App extends React.Component {
   render() {
     return (
       <>
+      <GlobalStyle />
         <Header />
         <ScrollToTop />
         <Switch>
